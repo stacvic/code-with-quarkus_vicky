@@ -14,6 +14,42 @@ You can run your application in dev mode that enables live coding using:
 
 > **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at <http://localhost:8080/q/dev/>.
 
+HOW TO
+
+set up run configurations with
+compile quarkus:dev
+type r into the ide to run the tests.  These will run each time you save a file 
+
+set Java version to sdk installed language level 16
+
+Bruno queries are in the folder
+
+run 
+Change a test:
+Create a new endpoint to return a function
+Start by writing a test
+
+./mvnw package
+
+docker build -f src/main/docker/Dockerfile.jvm -t quarkus/code-with-quarkus_vicky-jvm .
+
+docker run -i --rm -p 8080:8080 quarkus/code-with-quarkus_vicky-jvm
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Original text
+
+
 ## Packaging and running the application
 
 The application can be packaged using:
