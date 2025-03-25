@@ -2,6 +2,7 @@ package com.vicky;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
@@ -10,9 +11,9 @@ public class DoSomeMathsConvert {
 
 
     @GET
-    @Path("add")
+    @Path("/add/{id}")
     @Produces(MediaType.TEXT_PLAIN)
-    public int doSomeMaths() {
+    public int doSomeMaths(@PathParam("id") int userNumber) {
         try {
             return 42;
         } catch (java.lang.Exception e) {
@@ -21,9 +22,9 @@ public class DoSomeMathsConvert {
         
     }
     @GET
-    @Path("minus")
+    @Path("/minus/{id}")
     @Produces(MediaType.TEXT_PLAIN)
-    public int doSomeMathsMinus() {
+    public int doSomeMathsMinus(@PathParam("id") int userNumber) {
         try {
             return -42;
         } catch (java.lang.Exception e) {
